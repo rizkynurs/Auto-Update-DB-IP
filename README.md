@@ -64,7 +64,7 @@ Example
 
 💡 Note: Importing the full Location + ISP database typically takes under 20 minutes depending on your system’s performance.
 
-### Automate with Cron
+## Automate Update and Distribute the MMDB File with Cron
 
 To automate daily updates at 2:00 AM, add the following to your crontab:
 ```
@@ -72,7 +72,7 @@ To automate daily updates at 2:00 AM, add the following to your crontab:
 ```
 This ensures that the update process runs regularly and logs output to /opt/new-ip/fileip.log.
 
-#### Bash Script: update.sh
+### Bash Script: update.sh
 
 You can find the Bash script used for updating the database in this repository: update.sh
 
@@ -82,7 +82,7 @@ If updated, it copies the file to a central server and multiple remote (slave) s
 ⚠️ Note:
 Ensure that all destination (slave) servers have rsync properly set up to listen on port 12000 and that this port is accessible from the main server.
 
-#### Rsync Configuration on Slave Servers
+### Rsync Configuration on Slave Servers
 
 Each slave server must have rsyncd configured and running with the following settings (typically in /etc/rsyncd.conf):
 ```
