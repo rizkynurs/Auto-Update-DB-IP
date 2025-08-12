@@ -106,3 +106,6 @@ Example
 ./import.php -f dbip-country.csv.gz -d country -b myapp -t dbip_lookup
 
 💡 Note: Importing the full Location + ISP database typically takes under 20 minutes depending on your system’s performance.
+
+
+source: [MMDB databases File Update](https://db-ip.com/tutorials/database-file-update)
