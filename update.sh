@@ -32,7 +32,7 @@ if [[ "$old_checksum" != "$new_checksum" ]]; then
     for i in $(seq 1 $REVIVE_COUNT); do
         server="${REVIVE_PREFIX}${i}"
         echo "Syncing to $server..."
-        rsync -avhW --no-compress /data/project/dbip/{dbip-full.mmdb,*.json} "rsync://$server:12000/dbip/"
+        rsync -avhW --no-compress $DB_FILE rsync://$server:12000/dbip/
     done
 
     echo "All transfers complete."
